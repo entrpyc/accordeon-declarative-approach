@@ -1,0 +1,60 @@
+/* content is not visible */
+
+
+/* on .block.active show content */
+/* on .block.active trigger header animation */
+
+
+.flex-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.block {
+  border-bottom: 1px solid #ccc;
+}
+
+.header {
+  color: #222;
+  padding: 30px 0;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.14px;
+  line-height: 17px;
+  opacity: .86;
+}
+
+.content {
+  padding: 15px 0;
+  color: #5c5856;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+
+  max-height: 0;
+  overflow: hidden;
+}
+
+.block:not(.active) .content {
+  padding: 0;
+}
+
+.container + .container {
+  margin-top: 50px;
+}
+
+.block .header img {
+  transition: all 0.3s ease-in-out;
+}
+
+.block.active .header img {
+  transform: rotate(90deg);
+}
